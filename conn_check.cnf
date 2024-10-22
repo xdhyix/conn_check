@@ -1,0 +1,223 @@
+# conn_check.cnf
+# by donghoon_lee
+#
+# format: hostname threshold(ms) sleep(s) timeout(s) cycle(s)
+# example: db1 300 1 30 2
+
+#------------------------------------------------#
+#                                                #
+# SERVICE DEDICATION SERVER - 서비스군 물리 서버 #
+#                                                #
+#------------------------------------------------#
+adb1 500 2 30 2
+adb2 500 2 30 2
+zdb1 1000 2 30 2
+zdb2 1000 2 30 2
+logdb1 500 2 30 2
+logdb2 500 2 30 2
+syslogdb1 500 2 30 2
+syslogdb2 500 2 30 2
+zrdb1 500 2 30 2
+zrdb2 500 2 30 2
+zrdb3 500 2 30 2
+zrdb4 500 2 30 2
+zrdb5 500 2 30 2
+zrdb6 500 2 30 2
+zrdb7 500 2 30 2
+ardb1 500 2 30 2
+ardb2 500 2 30 2
+bdb1 500 2 30 2
+bdb2 500 2 30 2
+brdb1 500 2 30 2
+brdb2 500 2 30 2
+cdb1 500 2 30 2
+cdb2 500 2 30 2
+batchdb3 500 2 30 2
+batchdb4 500 2 30 2
+irdb1 500 2 30 2
+irdb2 500 2 30 2
+ndevdb1 2500 2 30 2
+ndevdb2 2500 2 30 2
+colddb1 500 2 30 2
+colddb2 500 2 30 2
+intradb2 500 2 30 2
+intradb3 500 2 30 2
+ecsdb1 500 2 30 2
+ecsdb2 500 2 30 2
+pubdb1 500 2 30 2
+pubdb2 500 2 30 2
+csdb1 500 2 30 2
+csdb2 500 2 30 2
+netpiondb1 500 2 30 2
+netpiondb2 500 2 30 2
+senddb1 500 2 30 2
+senddb2 500 2 30 2
+pushdb1 500 2 30 2
+pushdb2 500 2 30 2
+ddb1 500 2 30 2
+ddb2 500 2 30 2
+db6-devdb1 500 2 30 2
+db6-devdb2 500 2 30 2
+drdb1 500 2 30 2
+drdb2 500 2 30 2
+dbstat2 500 2 30 2
+admindb1 500 2 30 2
+admindb2 500 2 30 2
+ilmstore1 500 2 30 2
+ilmstore2 500 2 30 2
+debeziumdb2 500 2 30 2
+edb1 500 2 30 2
+edb2 500 2 30 2
+erdb1 500 2 30 2
+erdb2 500 2 30 2
+erdb16 500 2 30 2
+erdb17 500 2 30 2
+eirdb1 500 2 30 2
+eirdb2 500 2 30 2
+einfodb1 500 2 30 2
+einfodb2 500 2 30 2
+einfodb3 500 2 30 2
+einfodb4 500 2 30 2
+einfodb5 500 2 30 2
+esearchdb1 500 2 30 2
+esearchdb2 500 2 30 2
+esearchdb3 500 2 30 2
+ebatchdb2 500 2 30 2
+ebatchdb3 500 2 30 2
+ebatchdb4 500 2 30 2
+ebatchdb5 500 2 30 2
+ebatchdb6 500 2 30 2
+mydatadb1 500 2 30 2
+mydatadb2 500 2 30 2
+mydatacolddb1 500 2 30 2
+mydatacolddb2 500 2 30 2
+db7-devdb1 2500 2 30 2
+db7-devdb2 2500 2 30 2
+db7-devdb3 2500 2 30 2
+rdbtmp 500 2 30 2
+workdb1 500 2 30 2
+workdb2 500 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# SERVICE MASTER VIP - 서비스군 마스터 VIP       #
+#                                                #
+#------------------------------------------------#
+db1 1000 2 30 2
+db2 500 2 30 2
+db4 500 2 30 2
+db5 500 2 30 2
+db6 500 2 30 2
+db7 500 2 30 2
+csdb 500 2 30 2
+pushdb 500 2 30 2
+ndevdb 2500 2 30 2
+colddb 500 2 30 2
+logdb 500 2 30 2
+syslogdb 500 2 30 2
+netpiondb 500 2 30 2
+senddb 500 2 30 2
+intradb 500 2 30 2
+db6-devdb 500 2 30 2
+admindb 500 2 30 2
+ecsdb 500 2 30 2
+mydatadb 500 2 30 2
+mydatacolddb 500 2 30 2
+db7-devdb 2500 2 30 2
+ilmstore 500 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# SERVICE L4 VIP - 서비스군 L4 VIP               #
+#                                                #
+#------------------------------------------------#
+rdb 500 2 30 2
+batchdb 500 2 30 2
+irdb 500 2 30 2
+db2-rdb 500 2 30 2
+db2-irdb 500 2 30 2
+db2-batchdb 500 2 30 2
+db4-rdb 500 2 30 2
+db4-irdb 500 2 30 2
+db4-batchdb 500 2 30 2
+db5-rdb 500 2 30 2
+db5-irdb 500 2 30 2
+db5-batchdb 500 2 30 2
+db6-rdb 500 2 30 2
+db6-irdb 500 2 30 2
+db6-batchdb 500 2 30 2
+db7-rdb 500 2 30 2
+db7-irdb 500 2 30 2
+db7-batchdb 500 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# ETC DEDICATION SERVER - 기타 물리 서버         #
+#                                                #
+#------------------------------------------------#
+ainfodb1 2500 2 30 2
+ainfodb2 2500 2 30 2
+ainfodb3 2500 2 30 2
+infodb3 1000 2 30 2
+infodb4 1000 2 30 2
+doop-rdb3 1500 2 30 2
+doop-rdb4 1500 2 30 2
+afndb1 1000 2 30 2
+afndb2 1000 2 30 2
+revenuedb1 1000 2 30 2
+revenuedb2 1000 2 30 2
+steps-db1 1000 2 30 2
+steps-db2 1000 2 30 2
+amldb 1000 2 30 2
+amldb-qa 1000 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# ETC MASTER VIP - 기타 마스터 VIP               #
+#                                                #
+#------------------------------------------------#
+infodb 1000 2 30 2
+doop-rdb 1500 2 30 2
+steps-db 1000 2 30 2
+fndb 1000 2 30 2
+revenuedb 1000 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# ETC L4 VIP - 기타 L4 VIP                       #
+#                                                #
+#------------------------------------------------#
+doop-infodb 2500 2 30 2
+etl-infodb 2500 2 30 2
+search-infodb 2500 2 30 2
+doop-subdb 1500 2 30 2
+etl-subdb 1500 2 30 2
+db6-doopdb 500 2 30 2
+db7-searchdb 1500 2 30 2
+db7-doop-infodb 1500 2 30 2
+db7-etl-infodb 1500 2 30 2
+
+#------------------------------------------------#
+#                                                #
+# dbacs VIP                                      #
+#                                                #
+#------------------------------------------------#
+db1-user 1500 2 30 2
+db1-qa-user 1500 2 30 2
+db2-user 1500 2 30 2
+db4-user 1500 2 30 2
+db5-user 1500 2 30 2
+db6-user 1500 2 30 2
+db6-qa-user 1500 2 30 2
+db7-user 1500 2 30 2
+db7-qa-user 1500 2 30 2
+fndb-user 1500 2 30 2
+revenuedb-user 1500 2 30 2
+infodb-user 1500 2 30 2
+intradb-user 1500 2 30 2
+logdb-user 1500 2 30 2
+pushdb-user 1500 2 30 2
+senddb-user 1500 2 30 2
+syslogdb-user 1500 2 30 2
+csdb-user 1500 2 30 2
+admindb-user 1500 2 30 2
