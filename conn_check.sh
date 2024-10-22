@@ -4,8 +4,8 @@
 # by donghoon_lee
 
 PATH=/usr/local/bin/:/sbin:/bin:/usr/sbin:/usr/bin
-pid_files=/home/tmon/scripts/conn_check/pid_files
-hosts=/home/tmon/scripts/conn_check/conn_check.cnf
+pid_files=...../scripts/conn_check/pid_files
+hosts=...../scripts/conn_check/conn_check.cnf
 
 make_pid_file() {
    local file="$1"
@@ -51,8 +51,8 @@ remove_pid_file() {
 
 remove_chk_file() {
    local file="$1"
-   if [ -f "/home/tmon/scripts/conn_check/chk_files/${file}_stderr" ]; then
-      rm /home/tmon/scripts/conn_check/chk_files/${file}_stderr
+   if [ -f "...../scripts/conn_check/chk_files/${file}_stderr" ]; then
+      rm ...../scripts/conn_check/chk_files/${file}_stderr
       echo "#### check file ${file}_stderr is deleted ... ####"
   else
       echo "#### check file ${file}_stderr doesn't exist ... ####"
@@ -68,7 +68,7 @@ start() {
 		local cycle="$(grep "^${file}[[:space:]]" "$hosts" | awk '{print $5}')"
 		
 		echo "#### Starting $file demon shell ... ####"
-		nohup /home/tmon/scripts/conn_check/conn_check_demon.sh "$file" "$thold" "$interval" "$conn_timeout" "$cycle" >> /var/log/scripts/conn_check/conn_check_$file.log 2>&1 &
+		nohup ...../scripts/conn_check/conn_check_demon.sh "$file" "$thold" "$interval" "$conn_timeout" "$cycle" >> /var/log/scripts/conn_check/conn_check_$file.log 2>&1 &
 		make_pid_file "$file" $!
 	else
 		echo "#"
@@ -111,16 +111,16 @@ else
     elif [ "$1" == "killall" ]; then
 		echo "#### Killing all processes ... ####"
 		killall -9 conn_check_demon.sh
-		if [ -z "$(ls -A /home/tmon/scripts/conn_check/pid_files/)" ]; then
+		if [ -z "$(ls -A ...../scripts/conn_check/pid_files/)" ]; then
 		    echo "#### pid file does not exist, skipping delete ... ####"
 		else
-			rm /home/tmon/scripts/conn_check/pid_files/*
+			rm ...../scripts/conn_check/pid_files/*
 			echo "#### pid files are deleted ... ####"
 		fi
-		if [ -z "$(ls -A /home/tmon/scripts/conn_check/chk_files/)" ]; then
+		if [ -z "$(ls -A ...../scripts/conn_check/chk_files/)" ]; then
 		    echo "#### stderr chk file does not exist, skipping delete ... ####"
 		else
-		    rm /home/tmon/scripts/conn_check/chk_files/*
+		    rm ...../scripts/conn_check/chk_files/*
 			echo "#### chk files are deleted ... ####"
 		fi
     elif [ "$1" == "startall" ]; then
