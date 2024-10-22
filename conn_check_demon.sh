@@ -15,7 +15,7 @@ interval=$3
 conn_timeout=$4
 cycle=$5
 repository_host="host"
-repository_db="db"
+repository_db="db_response"
 chk_file="....../scripts/conn_check/chk_files/${host}_stderr"
 
 while sleep $interval; do
